@@ -47,13 +47,6 @@ function formValue() {
   });
 }
 
-// function watchForm() {
-//   $('form').submit(event => {
-//     event.preventDefault();
-//     getDogImage();
-//   });
-// }
-
 $(function () {
   console.log("App loaded! Waiting for submit!");
   formValue();
