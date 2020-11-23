@@ -9,8 +9,9 @@ function getDogImage(result) {
 
 function displayResults(responseJson) {
   console.log(responseJson);
-  //replace the existing image with the new one
+  //creating an empty to hold all of the html at once
   let html = "";
+  // responseJson.message is already an array [1, 2, 3, 4]
   for (const element of responseJson.message) {
     html += `<img src="${element}" class="results-img"/>`;
     //display the results section
@@ -18,10 +19,6 @@ function displayResults(responseJson) {
   $(".results").replaceWith(html);
   $(".results").removeClass("hidden");
 }
-
-// object = {
-//     message: [1, 2,...]
-// }
 
 //set api to a variable to make it easier to reference in functions
 const dogAPI = "https://dog.ceo/api/breeds/image/random/";
